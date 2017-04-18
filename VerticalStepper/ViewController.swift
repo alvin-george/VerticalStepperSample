@@ -9,17 +9,62 @@
 import UIKit
 
 class ViewController: UIViewController {
-
+    
+    @IBOutlet var incrementButton: UIButton!
+    @IBOutlet var decrementButton: UIButton!
+    
+    @IBOutlet var stepperValueLabel: UILabel!
+    
+    var stepperValue: Int = 0
+    var stepperValueLowerLimit :Int = 0
+    var stepperValueUpperLimit :Int = 10
+    var stepperStepValue:Int = 1
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+        
+        incrementButton.addTarget(self, action: #selector(ViewController.stepperValueChanged(_:)), for: UIControlEvents.touchUpInside)
+        
+        decrementButton.addTarget(self, action: #selector(ViewController.stepperValueChanged(_:)), for: UIControlEvents.touchUpInside)
+        
     }
-
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
     }
-
-
+    @IBAction func stepperValueChanged(_ sender: UIButton) {
+        
+        switch sender.tag {
+        case 0:
+            checkUpperLimitIsCrossed()
+        case 1:
+            checkLowerLimitIsCrossed()
+        default:
+            break
+        }
+        stepperValueLabel.text =  "$ "+String(stepperValue)
+    }
+    
+    func checkUpperLimitIsCrossed()
+    {
+        if (stepperValue >= stepperValueUpperLimit )
+        {
+            stepperValue = stepperValueUpperLimit
+        }
+        else {
+            stepperValue += stepperStepValue
+        }
+        
+    }
+    func checkLowerLimitIsCrossed()
+    {
+        if (stepperValue <= stepperValueLowerLimit)
+        {
+            stepperValue = stepperValueLowerLimit
+        }
+        else {
+            stepperValue -= stepperStepValue
+        }
+    }
+    
 }
 

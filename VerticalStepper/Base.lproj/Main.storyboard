@@ -22,7 +22,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="qow-z9-Fmx">
-                                <rect key="frame" x="164.5" y="310.5" width="46" height="46"/>
+                                <rect key="frame" x="164.5" y="240.5" width="46" height="46"/>
                                 <color key="backgroundColor" red="0.7843137255" green="0.12549019610000001" blue="0.14901960780000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="46" id="FtJ-ER-lXZ"/>
@@ -40,7 +40,7 @@
                                 </state>
                             </button>
                             <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="5Ha-Mt-gOd">
-                                <rect key="frame" x="164" y="376.5" width="46" height="46"/>
+                                <rect key="frame" x="164" y="306.5" width="46" height="46"/>
                                 <color key="backgroundColor" red="0.7843137255" green="0.12549019610000001" blue="0.14901960780000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="46" id="iUM-iN-h3S"/>
@@ -59,24 +59,55 @@
                                 </state>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="$" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qPa-Fe-OLk">
-                                <rect key="frame" x="10" y="256.5" width="355" height="29"/>
+                                <rect key="frame" x="10" y="186.5" width="355" height="29"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="JXD-ez-61o" customClass="CustomVerticalStepper" customModule="VerticalStepper" customModuleProvider="target">
+                                <rect key="frame" x="164" y="517" width="47" height="140"/>
+                                <color key="backgroundColor" red="0.85882352939999995" green="0.85882352939999995" blue="0.85882352939999995" alpha="0.98238146550000005" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="47" id="2Vg-Gb-bay"/>
+                                    <constraint firstAttribute="height" constant="140" id="A9F-cn-CCd"/>
+                                </constraints>
+                            </view>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Using Two Buttons and UILabel " textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hix-9C-G2T">
+                                <rect key="frame" x="10" y="208" width="146" height="86"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Using UIControl which is associated with UIview and stepper value delegated." textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="utx-0f-Neb">
+                                <rect key="frame" x="5" y="517" width="159" height="140"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
+                            <constraint firstItem="5Ha-Mt-gOd" firstAttribute="leading" secondItem="hix-9C-G2T" secondAttribute="trailing" constant="8" id="5x8-4U-x6t"/>
                             <constraint firstItem="qPa-Fe-OLk" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="10" id="9VN-yp-3GM"/>
                             <constraint firstAttribute="trailing" secondItem="qPa-Fe-OLk" secondAttribute="trailing" constant="10" id="Cja-Kb-4O9"/>
+                            <constraint firstItem="hix-9C-G2T" firstAttribute="top" secondItem="qPa-Fe-OLk" secondAttribute="bottom" constant="-7.5" id="D8c-AV-qQa"/>
+                            <constraint firstItem="utx-0f-Neb" firstAttribute="top" secondItem="JXD-ez-61o" secondAttribute="top" id="E0i-LJ-W37"/>
+                            <constraint firstItem="hix-9C-G2T" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="10" id="HkA-ES-gyD"/>
+                            <constraint firstItem="JXD-ez-61o" firstAttribute="leading" secondItem="5Ha-Mt-gOd" secondAttribute="leading" id="IiL-qe-zDm"/>
+                            <constraint firstItem="utx-0f-Neb" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="5" id="Nhx-iA-rPU"/>
                             <constraint firstItem="5Ha-Mt-gOd" firstAttribute="leading" secondItem="qow-z9-Fmx" secondAttribute="leading" id="TId-Jp-zmg"/>
-                            <constraint firstItem="qow-z9-Fmx" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="j99-ch-5cI"/>
+                            <constraint firstItem="JXD-ez-61o" firstAttribute="leading" secondItem="utx-0f-Neb" secondAttribute="trailing" id="TtZ-IO-2Uq"/>
+                            <constraint firstItem="utx-0f-Neb" firstAttribute="bottom" secondItem="JXD-ez-61o" secondAttribute="bottom" id="cXT-nv-UUw"/>
+                            <constraint firstItem="qow-z9-Fmx" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" constant="-70" id="j99-ch-5cI"/>
                             <constraint firstItem="5Ha-Mt-gOd" firstAttribute="top" secondItem="qow-z9-Fmx" secondAttribute="bottom" constant="20" id="k2i-Cl-TJy"/>
                             <constraint firstItem="qow-z9-Fmx" firstAttribute="top" secondItem="qPa-Fe-OLk" secondAttribute="bottom" constant="25" id="knU-Zw-VPg"/>
+                            <constraint firstItem="JXD-ez-61o" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="ksf-LA-gyl"/>
                             <constraint firstItem="qow-z9-Fmx" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="v4m-Yh-XlL"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="JXD-ez-61o" secondAttribute="bottom" constant="10" id="wew-Aj-EJF"/>
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="customVerticalStepper" destination="JXD-ez-61o" id="bdX-zB-qTO"/>
                         <outlet property="decrementButton" destination="5Ha-Mt-gOd" id="mp4-Oo-lGZ"/>
                         <outlet property="incrementButton" destination="qow-z9-Fmx" id="Ewh-Ob-5X0"/>
                         <outlet property="stepperValueLabel" destination="qPa-Fe-OLk" id="ZYX-f0-AXg"/>

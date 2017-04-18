@@ -8,17 +8,19 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+
+class ViewController: UIViewController, CustomVerticalStepperDeleagte {
     
     @IBOutlet var incrementButton: UIButton!
     @IBOutlet var decrementButton: UIButton!
-    
     @IBOutlet var stepperValueLabel: UILabel!
     
     var stepperValue: Int = 0
     var stepperValueLowerLimit :Int = 0
     var stepperValueUpperLimit :Int = 10
     var stepperStepValue:Int = 1
+
+    @IBOutlet var customVerticalStepper: CustomVerticalStepper!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -27,6 +29,8 @@ class ViewController: UIViewController {
         
         decrementButton.addTarget(self, action: #selector(ViewController.stepperValueChanged(_:)), for: UIControlEvents.touchUpInside)
         
+        customVerticalStepper.customDelegate =  self
+   
     }
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
@@ -64,6 +68,11 @@ class ViewController: UIViewController {
         else {
             stepperValue -= stepperStepValue
         }
+    }
+    
+    //CustomVerticalStepperDeleagte
+    func getStepperValue(currentStepperValue: String) {
+        print("currentStepperValue : \(currentStepperValue)")
     }
     
 }

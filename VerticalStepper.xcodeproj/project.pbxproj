@@ -12,6 +12,7 @@
 		82C0FA961EA5F30D00C35D28 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 82C0FA941EA5F30D00C35D28 /* Main.storyboard */; };
 		82C0FA981EA5F30D00C35D28 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 82C0FA971EA5F30D00C35D28 /* Assets.xcassets */; };
 		82C0FA9B1EA5F30D00C35D28 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 82C0FA991EA5F30D00C35D28 /* LaunchScreen.storyboard */; };
+		82C0FAA31EA5FA5600C35D28 /* CustomStepper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82C0FAA21EA5FA5600C35D28 /* CustomStepper.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +23,7 @@
 		82C0FA971EA5F30D00C35D28 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		82C0FA9A1EA5F30D00C35D28 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		82C0FA9C1EA5F30D00C35D28 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		82C0FAA21EA5FA5600C35D28 /* CustomStepper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomStepper.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,6 +62,7 @@
 				82C0FA971EA5F30D00C35D28 /* Assets.xcassets */,
 				82C0FA991EA5F30D00C35D28 /* LaunchScreen.storyboard */,
 				82C0FA9C1EA5F30D00C35D28 /* Info.plist */,
+				82C0FAA21EA5FA5600C35D28 /* CustomStepper.swift */,
 			);
 			path = VerticalStepper;
 			sourceTree = "<group>";
@@ -138,6 +141,7 @@
 			files = (
 				82C0FA931EA5F30D00C35D28 /* ViewController.swift in Sources */,
 				82C0FA911EA5F30D00C35D28 /* AppDelegate.swift in Sources */,
+				82C0FAA31EA5FA5600C35D28 /* CustomStepper.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -258,6 +262,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_X86_VECTOR_INSTRUCTIONS = default;
 				INFOPLIST_FILE = VerticalStepper/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.swift.Test.VerticalStepper;
@@ -270,6 +275,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_X86_VECTOR_INSTRUCTIONS = default;
 				INFOPLIST_FILE = VerticalStepper/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.swift.Test.VerticalStepper;
@@ -297,6 +303,7 @@
 				82C0FAA11EA5F30D00C35D28 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

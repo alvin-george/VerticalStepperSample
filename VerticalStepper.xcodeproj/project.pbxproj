@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		82193B1D1EAF1F720019BD75 /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82193B1C1EAF1F720019BD75 /* SecondViewController.swift */; };
+		82193B1F1EAF267F0019BD75 /* SampleTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82193B1E1EAF267F0019BD75 /* SampleTableViewCell.swift */; };
+		82193B221EAF29B40019BD75 /* VeritcalStepperOnTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82193B211EAF29B40019BD75 /* VeritcalStepperOnTableView.swift */; };
 		82C0FA911EA5F30D00C35D28 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82C0FA901EA5F30D00C35D28 /* AppDelegate.swift */; };
 		82C0FA931EA5F30D00C35D28 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82C0FA921EA5F30D00C35D28 /* ViewController.swift */; };
 		82C0FA961EA5F30D00C35D28 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 82C0FA941EA5F30D00C35D28 /* Main.storyboard */; };
@@ -16,6 +19,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		82193B1C1EAF1F720019BD75 /* SecondViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SecondViewController.swift; sourceTree = "<group>"; };
+		82193B1E1EAF267F0019BD75 /* SampleTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SampleTableViewCell.swift; sourceTree = "<group>"; };
+		82193B211EAF29B40019BD75 /* VeritcalStepperOnTableView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VeritcalStepperOnTableView.swift; sourceTree = "<group>"; };
 		82C0FA8D1EA5F30D00C35D28 /* VerticalStepper.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = VerticalStepper.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		82C0FA901EA5F30D00C35D28 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		82C0FA921EA5F30D00C35D28 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -37,6 +43,16 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		82193B201EAF29830019BD75 /* UsingTable */ = {
+			isa = PBXGroup;
+			children = (
+				82193B1C1EAF1F720019BD75 /* SecondViewController.swift */,
+				82193B1E1EAF267F0019BD75 /* SampleTableViewCell.swift */,
+				82193B211EAF29B40019BD75 /* VeritcalStepperOnTableView.swift */,
+			);
+			name = UsingTable;
+			sourceTree = "<group>";
+		};
 		82C0FA841EA5F30D00C35D28 = {
 			isa = PBXGroup;
 			children = (
@@ -63,6 +79,7 @@
 				82C0FA991EA5F30D00C35D28 /* LaunchScreen.storyboard */,
 				82C0FA9C1EA5F30D00C35D28 /* Info.plist */,
 				82C0FAA21EA5FA5600C35D28 /* CustomStepper.swift */,
+				82193B201EAF29830019BD75 /* UsingTable */,
 			);
 			path = VerticalStepper;
 			sourceTree = "<group>";
@@ -139,8 +156,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				82193B1D1EAF1F720019BD75 /* SecondViewController.swift in Sources */,
 				82C0FA931EA5F30D00C35D28 /* ViewController.swift in Sources */,
+				82193B1F1EAF267F0019BD75 /* SampleTableViewCell.swift in Sources */,
 				82C0FA911EA5F30D00C35D28 /* AppDelegate.swift in Sources */,
+				82193B221EAF29B40019BD75 /* VeritcalStepperOnTableView.swift in Sources */,
 				82C0FAA31EA5FA5600C35D28 /* CustomStepper.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

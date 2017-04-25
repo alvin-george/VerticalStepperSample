@@ -135,7 +135,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="131" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="dQu-eP-HKY">
-                                <rect key="frame" x="0.0" y="20" width="375" height="647"/>
+                                <rect key="frame" x="0.0" y="20" width="375" height="607"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="sampleTableViewCell" rowHeight="110" id="QOY-Ei-zS1" customClass="SampleTableViewCell" customModule="VerticalStepper" customModuleProvider="target">
@@ -177,7 +177,7 @@
                                                             <nil key="textColor"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
-                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="$" textAlignment="right" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="let-fp-UZV">
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="right" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="let-fp-UZV">
                                                             <rect key="frame" x="230" y="0.0" width="50" height="21"/>
                                                             <constraints>
                                                                 <constraint firstAttribute="height" constant="21" id="aRr-O7-654"/>
@@ -232,6 +232,8 @@
                                             </constraints>
                                         </tableViewCellContentView>
                                         <connections>
+                                            <outlet property="dishName" destination="Y5i-ZX-rCg" id="leV-rr-8Vb"/>
+                                            <outlet property="dishPrice" destination="1oL-NF-4JK" id="abG-3O-iWJ"/>
                                             <outlet property="totalDishPrice" destination="let-fp-UZV" id="zYy-wy-m8B"/>
                                             <outlet property="verticalStepper" destination="Gcr-Wv-Lui" id="b1S-bB-qgT"/>
                                         </connections>
@@ -242,10 +244,23 @@
                                     <outlet property="delegate" destination="Dpk-WN-erO" id="blQ-5n-eAg"/>
                                 </connections>
                             </tableView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="haj-kb-H0R">
+                                <rect key="frame" x="0.0" y="627" width="375" height="40"/>
+                                <color key="backgroundColor" red="1" green="0.75686274509999996" blue="0.18823529410000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="CWn-Bl-icq"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Medium" family="Helvetica Neue" pointSize="24"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="yM4-qW-rUT" firstAttribute="top" secondItem="dQu-eP-HKY" secondAttribute="bottom" id="FcP-Qg-QAF"/>
+                            <constraint firstItem="yM4-qW-rUT" firstAttribute="top" secondItem="haj-kb-H0R" secondAttribute="bottom" id="7ds-dB-Lnf"/>
+                            <constraint firstAttribute="trailing" secondItem="haj-kb-H0R" secondAttribute="trailing" id="F72-2R-3Dw"/>
+                            <constraint firstItem="haj-kb-H0R" firstAttribute="leading" secondItem="Ntl-Eu-fm0" secondAttribute="leading" id="LQw-8m-KJg"/>
+                            <constraint firstItem="haj-kb-H0R" firstAttribute="top" secondItem="dQu-eP-HKY" secondAttribute="bottom" id="acI-81-UfY"/>
                             <constraint firstItem="dQu-eP-HKY" firstAttribute="leading" secondItem="Ntl-Eu-fm0" secondAttribute="leading" id="eCP-j5-ruf"/>
                             <constraint firstItem="dQu-eP-HKY" firstAttribute="top" secondItem="9D5-dT-vXe" secondAttribute="bottom" id="nbL-6u-OCh"/>
                             <constraint firstAttribute="trailing" secondItem="dQu-eP-HKY" secondAttribute="trailing" id="ucA-I2-g8J"/>
@@ -253,6 +268,7 @@
                     </view>
                     <connections>
                         <outlet property="sampleTableView" destination="dQu-eP-HKY" id="kA8-yr-s5n"/>
+                        <outlet property="totalPaymentLabel" destination="haj-kb-H0R" id="wlO-fs-e6A"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="7Fv-pu-6zt" userLabel="First Responder" sceneMemberID="firstResponder"/>

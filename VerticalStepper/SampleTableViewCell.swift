@@ -13,6 +13,9 @@ class SampleTableViewCell: UITableViewCell {
     @IBOutlet var verticalStepper: VeritcalStepperOnTableView!
     @IBOutlet var totalDishPrice: UILabel!
     
+    @IBOutlet var dishName: UILabel!
+    @IBOutlet var dishPrice: UILabel!
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
